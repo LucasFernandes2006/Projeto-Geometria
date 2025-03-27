@@ -59,7 +59,7 @@ public class Triangulo {
         //Valida se todos os lados são iguas
         if (base == lado2 && base == lado3) {
 
-            System.out.println("Este Triângulo é Equilátero ...");
+            System.out.println("Este Triângulo é Equilátero ....");
 
         //Valida se todos os lados são diferentes
         } else if (base != lado2 && base != lado3 && lado2 != lado3) {
@@ -141,14 +141,16 @@ public class Triangulo {
 
         //Chama a função para definir os catetos e hipotenusa
         catetoHipotenusa(lado2, lado3, base);
-        //Valida se os catetos possuem resto 0 sendo divididos por 3 e 4, também verifica se a hipotenusa tem resto 0 dividido por 5
-        if (catetoMenor % 3 == 0 && catetoMaior % 4 == 0 && hipotenusa % 5 == 0 ){
-            System.out.println("Seu triangulo faz parte do padrão 3, 4, 5");
+
+        //Valida baseado na proporção e razão, pois o cateto menor vezes 4 deve ser igual ao cateto maior vezes 3 isso é o mesmo
+        //para o cateto menor vezes 5 deve ser igual à hipotenusa vezes 3
+        if (catetoMenor * 4 == catetoMaior * 3 && catetoMenor * 5 == hipotenusa * 3){
+            System.out.println("Seu Triângulo faz parte do padrão 3, 4, 5");
         }
 
         // Caso a validação não der certo ele imprime esse aviso
         else {
-            System.out.println("Seu triangulo não faz parte do padrão 3, 4, 5");
+            System.out.println("Seu Triângulo não faz parte do padrão 3, 4, 5");
         }
 
     }
