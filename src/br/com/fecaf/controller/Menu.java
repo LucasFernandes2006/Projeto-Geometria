@@ -169,7 +169,7 @@ public class Menu {
 
                     }
                     break;
-                /* Caso escolha triangulo*/
+                /* Caso escolha triângulo*/
                 case 3:
                     // Variável para o triângulo continuar rodando caso a sua saida ainda seja falsa
                     boolean exitTriangulo = false;

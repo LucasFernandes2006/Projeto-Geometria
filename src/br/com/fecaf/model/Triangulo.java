@@ -78,7 +78,6 @@ public class Triangulo {
 
         //Validação para confirmar se l1 é a hipotenusa enquanto l2 e b são catetos
         if(l1 > b && l1 > l2 ){
-
             hipotenusa = l1;
 
             if( l2 > b){
@@ -100,11 +99,11 @@ public class Triangulo {
             }
             else {
                 catetoMaior = b;
-                catetoMenor = l2;
+                catetoMenor = l1;
             }
         }
-        //Validação para confirmar se b é a hipotenusa enquanto l1 e l2 são catetos
-        else if ( b > l1 && b > l2) {
+        //Validação caso nem um dos ifs anteriores não funcionar, ou seja, se b é a hipotenusa enquanto l1 e l2 são catetos
+        else{
             hipotenusa = b;
 
             if( l1 > l2){
@@ -116,6 +115,7 @@ public class Triangulo {
                 catetoMenor = l1;
             }
         }
+
     }
 
     //Define se o triângulo é retângulo
